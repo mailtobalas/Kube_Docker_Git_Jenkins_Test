@@ -1,0 +1,7 @@
+spring:
+  devtools:
+    livereload:
+      enabled: false
+  cache:
+    jcache:
+      config: classpath:ehcache.xml

@@ -1,0 +1,22 @@
+<config
+  xmlns='http://www.ehcache.org/v3'
+
+  xmlns:jsr107='http://www.ehcache.org/v3/jsr107'>
+
+    <service>
+        <jsr107:defaults enable-statistics="true"/>
+    </service>
+
+    <cache alias="quoteIdCache">
+        <key-type>java.lang.String</key-type>
+        <value-type>java.lang.String</value-type>
+        <expiry>
+            <ttl unit="hours">2</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">500000</heap>
+        </resources>
+    </cache>
+
+
+</config>
