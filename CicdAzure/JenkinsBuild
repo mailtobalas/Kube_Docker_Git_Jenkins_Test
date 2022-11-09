@@ -22,6 +22,3 @@ properties([
 
 
 
-checkout([$class: 'GitSCM',
-          branches: [[name: '*/master']],
-          extensions: [], userRemoteConfigs: [[credentialsId: 'bala', url: 'https://github.com/mailtobalas/Kube_Docker_Git_Jenkins_Test']]])
