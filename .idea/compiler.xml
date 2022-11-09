@@ -9,12 +9,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Consumer" />
-        <module name="CacheApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CacheApp" target="1.5" />
       <module name="Consumer" target="1.8" />
+      <module name="DockerTest" target="1.8" />
       <module name="Kube_Docker_Git_Jenkins_Test" target="1.5" />
       <module name="TestDocker" target="1.5" />
     </bytecodeTargetLevel>

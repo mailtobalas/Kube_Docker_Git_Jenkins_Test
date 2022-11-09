@@ -1,0 +1,27 @@
+#!/usr/bin/env groovy
+properties([
+        parameters([
+                string(
+                        defaultValue: '',
+                        description: '''The release version. eg 1.0.0. Artifacts will be released with this version''',
+                        name: 'ReleaseVersion'),
+                string(
+                        defaultValue: '',
+                        description: '''The next development version. eg 1.0.1
+        The version in the pom file will be updated with ${nextDevelopmentVersion}-SNAPSHOT
+        ''',
+                        name: 'NextDevelopmentVersion'),
+                string(
+                        defaultValue: '',
+                        description: 'change cause',
+                        name: 'ChangeCause')
+        ]),
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '20', numToKeepStr: '20')),
+        pipelineTriggers([])
+])
+
+
+
+checkout([$class: 'GitSCM',
+          branches: [[name: '*/master']],
+          extensions: [], userRemoteConfigs: [[credentialsId: 'bala', url: 'https://github.com/mailtobalas/Kube_Docker_Git_Jenkins_Test']]])

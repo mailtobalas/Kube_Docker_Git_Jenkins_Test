@@ -17,7 +17,7 @@ public class eventclass {
 @Autowired
 consumerclass consumeClass;
 
-    @EventListener(ApplicationReadyEvent.class)
+
     public void Consumer() throws Exception {
 
 
