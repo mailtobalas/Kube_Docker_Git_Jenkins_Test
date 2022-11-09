@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Kube_Docker_Git_Jenkins_Test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TestDocker" vcs="Git" />
   </component>
 </project>
