@@ -14,7 +14,7 @@
     <artifactId>TestDocker</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>CacheApp</module>
+
         <module>Consumer</module>
     </modules>
 
