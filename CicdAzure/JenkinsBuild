@@ -20,5 +20,9 @@ properties([
         pipelineTriggers([])
 ])
 
+def label = "release-${UUID.randomUUID().toString()}"
+
+println label
+
 
 
