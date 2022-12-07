@@ -21,7 +21,7 @@ properties([
 ])
 
 def label = "release-${UUID.randomUUID().toString()}"
-
+println label
 println label
 
 
