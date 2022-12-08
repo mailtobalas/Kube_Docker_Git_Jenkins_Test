@@ -33,8 +33,7 @@ podTemplate(containers: [
                 stage('Get a Maven project') {
 
                         git 'https://github.com/jenkinsci/kubernetes-plugin.git'
-                        steps
-                                {
+
                                         container('maven') {
                                                 stage('Build a Maven project') {
 
@@ -42,7 +41,7 @@ podTemplate(containers: [
 
                                                 }
                                         }
-                                }
+
                 }
         }
 
