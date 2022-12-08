@@ -28,7 +28,7 @@ podTemplate(label: label,
                 containerTemplate(name: 'build', image: 'LocalTestbuilddeployacr', ttyEnabled: true, alwaysPullImage: true, privileged: true)
         ],
         volumes: [hostPathVolume(hostPath: '/root/.m2', mountPath: '/root/.m2')]
-){
+) {
         node(label) { // node start
                 container('build') {
                         stage('checkout') {
@@ -36,4 +36,5 @@ podTemplate(label: label,
                         }
                 }
         }
+}
 
