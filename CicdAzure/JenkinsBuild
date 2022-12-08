@@ -21,8 +21,14 @@ properties([
 ])
 
 def label = "release-${UUID.randomUUID().toString()}"
-println label
-println label
+
+podTemplate {
+        node(label) {
+                stage('Run shell') {
+                        sh 'echo hello world'
+                }
+        }
+}
 
 
 
