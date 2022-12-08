@@ -22,13 +22,18 @@ properties([
 
 def label = "release-${UUID.randomUUID().toString()}"
 
-podTemplate {
-        node(label) {
-                stage('Run shell') {
-                        sh 'echo hello world'
+
+podTemplate(label: label,
+        containers: [
+                containerTemplate(name: 'build', image: 'LocalTestbuilddeployacr', ttyEnabled: true, alwaysPullImage: true, privileged: true)
+        ],
+        volumes: [hostPathVolume(hostPath: '/root/.m2', mountPath: '/root/.m2')]
+){
+        node(label) { // node start
+                container('build') {
+                        stage('checkout') {
+                                sh 'echo hello world'
+                        }
                 }
         }
-}
-
-
 
