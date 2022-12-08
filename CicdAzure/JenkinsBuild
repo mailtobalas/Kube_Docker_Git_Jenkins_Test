@@ -25,7 +25,7 @@ def label = "release-5f0b5e0e-b875-4549-ae61-442d5b546bfa"
 
 podTemplate(label: label,
         containers: [
-                containerTemplate(name: 'build', image: 'LocalTestbuilddeployacr', ttyEnabled: true, alwaysPullImage: true, privileged: true)
+                containerTemplate(name: 'build', image: 'maven:3.3.9-jdk-8-alpine', ttyEnabled: true, alwaysPullImage: true, privileged: true)
         ],
         volumes: [hostPathVolume(hostPath: '/root/.m2', mountPath: '/root/.m2')]
 ) {
