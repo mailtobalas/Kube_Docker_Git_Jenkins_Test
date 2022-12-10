@@ -20,7 +20,7 @@ properties([
         pipelineTriggers([])
 ])
 
-def label = "slave"
+def label = "test"
 
 
 podTemplate(containers: [
