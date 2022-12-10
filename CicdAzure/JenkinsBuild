@@ -20,7 +20,7 @@ properties([
         pipelineTriggers([])
 ])
 
-def label = "release-5f0b5e0e-b875-4549-ae61-442d5b546bfa"
+def label = "jenkins"
 
 
 podTemplate(containers: [
