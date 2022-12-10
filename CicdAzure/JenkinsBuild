@@ -20,7 +20,7 @@ properties([
         pipelineTriggers([])
 ])
 
-def label = "test"
+def label = "release-5f0b5e0e-b875-4549-ae61-442d5b546bfa"
 
 /*
 pipeline {
@@ -63,7 +63,7 @@ podTemplate(label: label,
         volumes: [hostPathVolume(hostPath: '/root/.m2', mountPath: '/root/.m2')]
 ) {
         node(label) { // node start
-                container('build') {
+                container('maven') {
                         stage('checkout') {
                                 sh 'echo hello world'
                         }
